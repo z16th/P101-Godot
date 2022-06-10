@@ -1,6 +1,6 @@
 extends Lesson
 
-#Lesson 06: Functions
+#Lesson 07: Functions
 
 var message = "Original message"
 
