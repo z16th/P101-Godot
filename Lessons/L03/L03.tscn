@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lessons/L03/L03.gd" type="Script" id=1]
+
+[node name="L03" type="Node"]
+script = ExtResource( 1 )
+instructions = "Check the script
+
+Check your console"

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lessons/L07/L07.gd" type="Script" id=1]
+
+[node name="L06" type="Node"]
+script = ExtResource( 1 )
