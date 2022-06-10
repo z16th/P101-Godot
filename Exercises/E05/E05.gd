@@ -7,6 +7,13 @@ extends Node
 # 5. Print if the array has "dog" in it
 # 6. Print the first animal without using indexes
 # 7. Print the last animal without using indexes
-
+var animals := ["elephant","wolf","cow", "cat"]
 func _ready():
-	pass # Replace with function body.
+	print("First animal:", animals.front())
+	print("Last animal:", animals.back())
+	animals.shuffle()
+	var favorite_animal_index = animals.find("elephant")
+	print("My favorite animal:",animals[favorite_animal_index])
+	print("Favorite animals:", animals.size())
+	print("I like dogs?:", animals.has("dog"))
+	
