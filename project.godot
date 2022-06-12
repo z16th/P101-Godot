@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="P101"
 run/main_scene="res://Playground.tscn"
-config/icon="res://icon.png"
+config/icon="res://1f3ae 1.png"
 
 [physics]
 
