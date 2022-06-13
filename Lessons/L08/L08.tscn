@@ -4,3 +4,4 @@
 
 [node name="L08" type="Node"]
 script = ExtResource( 1 )
+topic = "Loops"

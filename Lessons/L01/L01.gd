@@ -1,4 +1,6 @@
-extends Node
+extends Lesson
+
+#Lesson 01: Variables and data types
 
 # I'm a comment
 # You can prefix a line with '#' to comment your code

@@ -4,6 +4,4 @@
 
 [node name="L03" type="Node"]
 script = ExtResource( 1 )
-instructions = "Check the script
-
-Check your console"
+topic = "Basic maths"

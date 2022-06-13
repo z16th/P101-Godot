@@ -4,3 +4,4 @@
 
 [node name="L06" type="Node"]
 script = ExtResource( 1 )
+topic = "Dictionaries"
