@@ -4,3 +4,4 @@
 
 [node name="E05" type="Node"]
 script = ExtResource( 1 )
+topic = "Arrays"

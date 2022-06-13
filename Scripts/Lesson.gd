@@ -1,22 +1,27 @@
 extends Node
 class_name Lesson
 
-const DEFAULT_MESSAGE = "Open the Script and start coding"
+const DEFAULT_MESSAGE = "Open the Script, run it and check the console"
 
+export (String) var topic
 export (String,MULTILINE) var instructions := DEFAULT_MESSAGE setget set_instructions
 
 var content := Label.new()
 
 func _ready():
+	var canvas = CanvasLayer.new()
+	canvas.layer = -1
+	add_child(canvas)
+	
 	var panel = Panel.new()
-	add_child(panel)
+	canvas.add_child(panel)
 	panel.set_anchor(MARGIN_BOTTOM,1)
 	panel.set_anchor(MARGIN_RIGHT,1)
 	panel.rect_size = get_viewport().size
 	
 	var title = Label.new()
-	title.text = name
-	add_child(title)
+	title.text = name if !topic else name + ": " + topic
+	canvas.add_child(title)
 	
 	content = Label.new()
 	content.set_anchor(MARGIN_BOTTOM,1)
@@ -24,7 +29,7 @@ func _ready():
 	content.align = Label.ALIGN_CENTER
 	content.valign = Label.VALIGN_CENTER
 	content.text = instructions
-	add_child(content)
+	canvas.add_child(content)
 
 func set_instructions(text:String):
 	instructions = text

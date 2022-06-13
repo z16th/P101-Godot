@@ -4,6 +4,7 @@
 
 [node name="L01" type="Node"]
 script = ExtResource( 1 )
+topic = "Variables and data types"
 
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0

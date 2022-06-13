@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "Car",
+"language": "GDScript",
+"path": "res://Lessons/L09/Car.gd"
+}, {
+"base": "Node",
 "class": "Lesson",
 "language": "GDScript",
 "path": "res://Scripts/Lesson.gd"
 } ]
 _global_script_class_icons={
+"Car": "",
 "Lesson": ""
 }
 
@@ -22,7 +28,15 @@ _global_script_class_icons={
 
 config/name="P101"
 run/main_scene="res://Playground.tscn"
-config/icon="res://icon.png"
+config/icon="res://1f3ae 1.png"
+
+[input]
+
+accel={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [physics]
 

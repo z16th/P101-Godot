@@ -4,7 +4,15 @@ extends Lesson
 # Based on code found at: https://gdscript.com/tutorials/looping/
 
 func _ready():
-	while_loop()
+	basic_loop()
+#	range_loop()
+#	range_loop_reversed()
+#	range_loop_stepped()
+#	loop_over_string()
+#	loop_over_array()
+#	loop_over_dictionary()
+#	continue_and_break_loop()
+#	while_loop()
 
 func basic_loop():
 	for n in 10:

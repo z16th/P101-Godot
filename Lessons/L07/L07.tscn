@@ -2,5 +2,6 @@
 
 [ext_resource path="res://Lessons/L07/L07.gd" type="Script" id=1]
 
-[node name="L06" type="Node"]
+[node name="L07" type="Node"]
 script = ExtResource( 1 )
+topic = "Functions"

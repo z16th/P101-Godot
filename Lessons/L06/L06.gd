@@ -1,5 +1,7 @@
 extends Lesson
 
+#Lesson 06: Dictionaries
+
 var favorite_games = {
 	"rpg": "Fable",
 	"rhythm": "Guitar Hero III",
