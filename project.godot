@@ -15,12 +15,18 @@ _global_script_classes=[ {
 "path": "res://Lessons/L09/Car.gd"
 }, {
 "base": "Node",
+"class": "FPokemon",
+"language": "GDScript",
+"path": "res://Projects/P01/Finished/Pokemon.gd"
+}, {
+"base": "Node",
 "class": "Lesson",
 "language": "GDScript",
 "path": "res://Scripts/Lesson.gd"
 } ]
 _global_script_class_icons={
 "Car": "",
+"FPokemon": "",
 "Lesson": ""
 }
 
@@ -33,6 +39,11 @@ config/icon="res://1f3ae 1.png"
 [input]
 
 accel={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+catch={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
  ]
