@@ -11,12 +11,13 @@ func _ready():
 
 func _process(delta):
 	update_ui()
-#	gti.unfair_deaccel()
-	gti.deaccel(delta)
+	gti.unfair_deaccel()
+#	gti.deaccel(delta)
 	if Input.is_action_pressed("accel"):
-#		gti.unfair_accel()
-		gti.accel(delta)
+		gti.unfair_accel()
+#		gti.accel(delta)
 	
+#	crv.unfair_deaccel()
 	crv.deaccel(delta)
 	if Input.is_action_pressed("accel"):
 #		gti.unfair_accel()

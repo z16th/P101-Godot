@@ -15,12 +15,18 @@ _global_script_classes=[ {
 "path": "res://Lessons/L09/Car.gd"
 }, {
 "base": "Node",
+"class": "Fighter",
+"language": "GDScript",
+"path": "res://Exercises/E09/Fighter.gd"
+}, {
+"base": "Node",
 "class": "Lesson",
 "language": "GDScript",
 "path": "res://Scripts/Lesson.gd"
 } ]
 _global_script_class_icons={
 "Car": "",
+"Fighter": "",
 "Lesson": ""
 }
 

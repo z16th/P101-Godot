@@ -10,9 +10,6 @@ instructions = "Use the space bar to accelerate"
 
 [node name="CRV" type="Node" parent="."]
 script = ExtResource( 2 )
-accel = 1.2
-friction = 0.15
-fuel_consumption = 2.0
 
 [node name="Name" type="Label" parent="CRV"]
 margin_left = 308.0
