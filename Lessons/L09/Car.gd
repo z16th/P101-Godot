@@ -1,6 +1,7 @@
 extends Node
 class_name Car
 
+# Properties
 export var accel:float = 2.0
 export var friction:float = 0.1
 export var fuel_consumption:float = 1
@@ -8,6 +9,7 @@ export var fuel_consumption:float = 1
 var fuel:float = 0
 var speed:float = 0
 
+# Methods
 func accel(delta):
 	if fuel > 0:
 		fuel -= fuel_consumption * delta

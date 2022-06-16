@@ -2,7 +2,10 @@ extends Lesson
 
 # Lesson 09: Classes
 
+#Using a new instance via nodes
 onready var crv = $CRV
+
+#Creating a new instance via code
 var gti = Car.new()
 
 func _ready():
