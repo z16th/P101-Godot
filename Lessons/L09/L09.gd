@@ -2,10 +2,10 @@ extends Lesson
 
 # Lesson 09: Classes
 
-#Using a new instance via nodes
+# Using a new instance via nodes
 onready var crv = $CRV
 
-#Creating a new instance via code
+# Creating a new instance via code
 var gti = Car.new()
 
 func _ready():
@@ -20,10 +20,11 @@ func _process(delta):
 #		gti.unfair_accel()
 		gti.accel(delta)
 	
-	crv.deaccel(delta)
+	crv.unfair_deaccel()
+#	crv.deaccel(delta)
 	if Input.is_action_pressed("accel"):
-#		gti.unfair_accel()
-		crv.accel(delta)
+		gti.unfair_accel()
+#		crv.accel(delta)
 
 func update_ui():
 	$GTI/Fuel.text = "Fuel: {fuel}".format({"fuel": "%0.2f" % gti.fuel})

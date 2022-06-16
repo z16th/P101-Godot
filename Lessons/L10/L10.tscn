@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Lessons/L10/L10.gd" type="Script" id=1]
+[ext_resource path="res://Lessons/L10/assets/basic-sprite.jpg" type="Texture" id=2]
+[ext_resource path="res://Lessons/L10/assets/basic-animation_00.jpg" type="Texture" id=3]
+[ext_resource path="res://Lessons/L10/assets/basic-animation_05.jpg" type="Texture" id=4]
+[ext_resource path="res://Lessons/L10/assets/basic-animation_03.jpg" type="Texture" id=5]
+[ext_resource path="res://Lessons/L10/assets/basic-animation_02.jpg" type="Texture" id=6]
+[ext_resource path="res://Lessons/L10/assets/basic-animation_01.jpg" type="Texture" id=7]
+[ext_resource path="res://Lessons/L10/assets/basic-animation_04.jpg" type="Texture" id=8]
+[ext_resource path="res://Lessons/L10/assets/teemo.wav" type="AudioStream" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="L10" type="Node"]
+script = ExtResource( 1 )
+topic = "Basic Nodes"
+instructions = ""
+
+[node name="Label" type="Label" parent="."]
+margin_left = 384.0
+margin_top = 48.0
+margin_right = 645.0
+margin_bottom = 62.0
+text = "I'm a Label, you can display text with me"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 345.0
+margin_top = 95.0
+margin_right = 679.0
+margin_bottom = 119.0
+text = "I'm a LineEdit, you can get text user input with me"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 354.0
+margin_top = 144.0
+margin_right = 681.0
+margin_bottom = 201.0
+text = "I'm a button, you can create interactions with me"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 406, 340 )
+scale = Vector2( 0.606667, 0.606667 )
+texture = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 627, 340 )
+scale = Vector2( 0.606667, 0.606667 )
+frames = SubResource( 1 )
+frame = 5
+playing = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="Play" type="Button" parent="AudioStreamPlayer"]
+margin_left = 42.0
+margin_top = 490.0
+margin_right = 369.0
+margin_bottom = 547.0
+text = "Play Sound"
+
+[connection signal="pressed" from="AudioStreamPlayer/Play" to="." method="_on_Play_pressed"]
