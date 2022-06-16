@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Lessons/L10/L10.gd" type="Script" id=1]
+[ext_resource path="res://Lessons/L11/assets/chr_knight.obj" type="ArrayMesh" id=2]
+
+[node name="L11" type="Node"]
+script = ExtResource( 1 )
+topic = "3D Nodes"
+instructions = ""
+show_instructions_panel = false
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.689338, 1.86202 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, -0.258819, 0.965926, 0, -0.965926, -0.258819, 0, 3, 0 )
+
+[node name="chr_knight" type="MeshInstance" parent="Spatial"]
+mesh = ExtResource( 2 )
+material/0 = null

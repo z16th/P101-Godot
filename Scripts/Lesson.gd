@@ -5,10 +5,19 @@ const DEFAULT_MESSAGE = "Open the Script, run it and check the console"
 
 export (String) var topic
 export (String,MULTILINE) var instructions := DEFAULT_MESSAGE setget set_instructions
+export var show_instructions_panel := true
 
 var content := Label.new()
 
 func _ready():
+	if show_instructions_panel:
+		add_panel()
+
+func set_instructions(text:String):
+	instructions = text
+	content.text = instructions
+	
+func add_panel():
 	var canvas = CanvasLayer.new()
 	canvas.layer = -1
 	add_child(canvas)
@@ -30,8 +39,3 @@ func _ready():
 	content.valign = Label.VALIGN_CENTER
 	content.text = instructions
 	canvas.add_child(content)
-
-func set_instructions(text:String):
-	instructions = text
-	content.text = instructions
-	
