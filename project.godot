@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "Lesson",
 "language": "GDScript",
 "path": "res://Scripts/Lesson.gd"
+}, {
+"base": "Node",
+"class": "Pokemon",
+"language": "GDScript",
+"path": "res://Projects/P01/Katia/KPokemon.gd"
 } ]
 _global_script_class_icons={
 "Car": "",
 "FPokemon": "",
 "Fighter": "",
-"Lesson": ""
+"Lesson": "",
+"Pokemon": ""
 }
 
 [application]
