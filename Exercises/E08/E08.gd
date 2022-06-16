@@ -36,3 +36,7 @@ func song_artist():
 	var songs = {"Dangerous":"MJ","Pompeii":"Bastille","Radioactive":"Imagine Dragons"}
 	for song_name in songs:
 		print(song_name + " by " + songs[song_name])
+
+
+func _on_Button_pressed():
+	pass # Replace with function body.

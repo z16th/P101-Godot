@@ -1,6 +1,66 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Exercises/E08/E08.gd" type="Script" id=1]
+[ext_resource path="res://Exercises/E10/E10.gd" type="Script" id=1]
+[ext_resource path="res://Exercises/E10/20220422_163218.jpg" type="Texture" id=2]
+[ext_resource path="res://Exercises/E10/301221.png" type="Texture" id=3]
+[ext_resource path="res://Lessons/L10/assets/teemo.wav" type="AudioStream" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Walk"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 7 ]
+}
 
 [node name="E10" type="Node"]
 script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 210.0
+margin_top = 114.0
+margin_right = 435.0
+margin_bottom = 191.0
+text = "HELLO"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 217.0
+margin_top = 140.0
+margin_right = 536.0
+margin_bottom = 205.0
+text = "Player Name"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 295, 295 )
+scale = Vector2( 0.0673828, 0.0628034 )
+texture = ExtResource( 2 )
+
+[node name="301221" type="Sprite" parent="."]
+position = Vector2( 194, 480 )
+scale = Vector2( 0.280488, 0.280488 )
+texture = ExtResource( 3 )
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="301221"]
+anims/Walk = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Button" type="Button" parent="AudioStreamPlayer"]
+margin_left = 321.0
+margin_top = 450.0
+margin_right = 582.0
+margin_bottom = 518.0
+text = "Teemo"
+
+[connection signal="pressed" from="AudioStreamPlayer/Button" to="." method="_on_Button_pressed"]
