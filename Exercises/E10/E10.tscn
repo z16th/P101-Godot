@@ -1,26 +1,34 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Exercises/E10/E10.gd" type="Script" id=1]
 [ext_resource path="res://Exercises/E10/20220422_163218.jpg" type="Texture" id=2]
-[ext_resource path="res://Exercises/E10/301221.png" type="Texture" id=3]
+[ext_resource path="res://Exercises/E10/assets/Player-appear6.png" type="Texture" id=3]
 [ext_resource path="res://Lessons/L10/assets/teemo.wav" type="AudioStream" id=4]
+[ext_resource path="res://Exercises/E10/assets/Player-appear13.png" type="Texture" id=5]
+[ext_resource path="res://Exercises/E10/assets/Player-appear8.png" type="Texture" id=6]
+[ext_resource path="res://Exercises/E10/assets/Player-appear14.png" type="Texture" id=7]
+[ext_resource path="res://Exercises/E10/assets/Player-appear15.png" type="Texture" id=8]
+[ext_resource path="res://Exercises/E10/assets/Player-appear16.png" type="Texture" id=9]
+[ext_resource path="res://Exercises/E10/assets/Player-appear17.png" type="Texture" id=10]
+[ext_resource path="res://Exercises/E10/assets/Player-appear18.png" type="Texture" id=11]
+[ext_resource path="res://Exercises/E10/assets/Player-appear12.png" type="Texture" id=12]
+[ext_resource path="res://Exercises/E10/assets/Player-appear10.png" type="Texture" id=13]
+[ext_resource path="res://Exercises/E10/assets/Player-appear11.png" type="Texture" id=14]
+[ext_resource path="res://Exercises/E10/assets/Player-appear9.png" type="Texture" id=15]
+[ext_resource path="res://Exercises/E10/assets/Player-appear7.png" type="Texture" id=16]
+[ext_resource path="res://Exercises/E10/assets/Player-appear3.png" type="Texture" id=17]
+[ext_resource path="res://Exercises/E10/assets/Player-appear1.png" type="Texture" id=18]
+[ext_resource path="res://Exercises/E10/assets/Player-appear2.png" type="Texture" id=19]
+[ext_resource path="res://Exercises/E10/assets/Player-appear4.png" type="Texture" id=20]
+[ext_resource path="res://Exercises/E10/assets/Player-appear5.png" type="Texture" id=21]
 
-[sub_resource type="Animation" id=1]
-resource_name = "Walk"
-length = 2.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 7 ]
-}
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 3 ), ExtResource( 16 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="E10" type="Node"]
 script = ExtResource( 1 )
@@ -44,15 +52,6 @@ position = Vector2( 295, 295 )
 scale = Vector2( 0.0673828, 0.0628034 )
 texture = ExtResource( 2 )
 
-[node name="301221" type="Sprite" parent="."]
-position = Vector2( 194, 480 )
-scale = Vector2( 0.280488, 0.280488 )
-texture = ExtResource( 3 )
-hframes = 8
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="301221"]
-anims/Walk = SubResource( 1 )
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 
@@ -62,5 +61,12 @@ margin_top = 450.0
 margin_right = 582.0
 margin_bottom = 518.0
 text = "Teemo"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 743, 222 )
+scale = Vector2( 7.63636, 7.63636 )
+frames = SubResource( 1 )
+frame = 13
+playing = true
 
 [connection signal="pressed" from="AudioStreamPlayer/Button" to="." method="_on_Button_pressed"]
