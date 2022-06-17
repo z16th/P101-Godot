@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/squirtle.png-de19d4219a521311067beffdfeb3c195.stex"
+path="res://.import/squirtle.png-a5d59a6f2433f4204d1214d16c3bc4d6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Projects/P01/assets/squirtle.png"
-dest_files=[ "res://.import/squirtle.png-de19d4219a521311067beffdfeb3c195.stex" ]
+source_file="res://Projects/Pokemon/assets/squirtle.png"
+dest_files=[ "res://.import/squirtle.png-a5d59a6f2433f4204d1214d16c3bc4d6.stex" ]
 
 [params]
 

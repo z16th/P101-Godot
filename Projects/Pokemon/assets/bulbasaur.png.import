@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/charmander.png-3123a4a3c2f27bb34c1d7260023f3cc3.stex"
+path="res://.import/bulbasaur.png-4ea178a348086961738ba2f872b4b5e3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Projects/P01/assets/charmander.png"
-dest_files=[ "res://.import/charmander.png-3123a4a3c2f27bb34c1d7260023f3cc3.stex" ]
+source_file="res://Projects/Pokemon/assets/bulbasaur.png"
+dest_files=[ "res://.import/bulbasaur.png-4ea178a348086961738ba2f872b4b5e3.stex" ]
 
 [params]
 

@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "FPokemon",
 "language": "GDScript",
-"path": "res://Projects/P01/Finished/Pokemon.gd"
+"path": "res://Projects/Pokemon/P01/Finished/Pokemon.gd"
 }, {
 "base": "Node",
 "class": "Fighter",
@@ -32,7 +32,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Pokemon",
 "language": "GDScript",
-"path": "res://Projects/P01/Katia/KPokemon.gd"
+"path": "res://Projects/Pokemon/KPokemon.gd"
 } ]
 _global_script_class_icons={
 "Car": "",
