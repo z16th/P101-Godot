@@ -11,4 +11,3 @@ func _input(event):
 		Pokemon1.subtract()
 		if Pokemon1.capture_rate == 1:
 			print(Pokemon1.pokemon_name, " CATCH")
-	

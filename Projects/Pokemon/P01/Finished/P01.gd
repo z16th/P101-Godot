@@ -1,8 +1,8 @@
 extends Node
 
-var bulbasaur = FPokemon.new("Bulbasaur","res://Projects/P01/assets/bulbasaur.png",15)
-var charmander = FPokemon.new("Charmander","res://Projects/P01/assets/charmander.png",20)
-var squirtle = FPokemon.new("Squirtle","res://Projects/P01/assets/squirtle.png",18)
+var bulbasaur = FPokemon.new("Bulbasaur","res://Projects/Pokemon/assets/bulbasaur.png",15)
+var charmander = FPokemon.new("Charmander","res://Projects/Pokemon/assets/charmander.png",20)
+var squirtle = FPokemon.new("Squirtle","res://Projects/Pokemon/assets//squirtle.png",18)
 
 var pokemons = [bulbasaur,charmander,squirtle]
 var picked:FPokemon = get_random_pokemon()
