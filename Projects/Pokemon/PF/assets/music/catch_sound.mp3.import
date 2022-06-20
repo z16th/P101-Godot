@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/catch_sound.mp3-2c3c486f1ad05428dc3ddb3301b4bfcb.mp3str"
+
+[deps]
+
+source_file="res://Projects/Pokemon/PF/assets/music/catch_sound.mp3"
+dest_files=[ "res://.import/catch_sound.mp3-2c3c486f1ad05428dc3ddb3301b4bfcb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

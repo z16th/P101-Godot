@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/title-music.ogg-46e340bf2abedfad923fe2cbe85d4b5c.oggstr"
+
+[deps]
+
+source_file="res://Projects/Pokemon/PF/assets/music/title-music.ogg"
+dest_files=[ "res://.import/title-music.ogg-46e340bf2abedfad923fe2cbe85d4b5c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Projects/Pokemon/P01/Finished/P01.gd" type="Script" id=1]
-[ext_resource path="res://Projects/Pokemon/assets/bulbasaur.png" type="Texture" id=2]
+[ext_resource path="res://Projects/Pokemon/P01/Finished/assets/bulbasaur.png" type="Texture" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 0.866667, 0.266667, 1 )

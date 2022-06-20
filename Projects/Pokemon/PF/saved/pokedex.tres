@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Projects/Pokemon/PF/scripts/FPokedex.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+catched = {
+"nidoqueen": 1,
+"weezing": 1
+}
