@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Projects/Pokemon/PF/assets/backgrounds/background_title.webp" type="Texture" id=1]
+[ext_resource path="res://Projects/Pokemon/PF/scenes/Menu.gd" type="Script" id=2]
+[ext_resource path="res://Projects/Pokemon/PF/resources/themes/custom-theme.tres" type="Theme" id=3]
+[ext_resource path="res://Projects/Pokemon/PF/assets/music/title-music.ogg" type="AudioStream" id=4]
+
+[node name="Menu" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+margin_left = 48.0
+margin_top = 103.0
+margin_right = 315.0
+margin_bottom = 238.0
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 2
+
+[node name="GoInTheWild" type="Button" parent="Control/GridContainer"]
+modulate = Color( 0.482353, 0.8, 1, 1 )
+margin_right = 150.0
+margin_bottom = 33.0
+focus_mode = 0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+text = "Go In The Wild"
+
+[node name="Pokedex" type="Button" parent="Control/GridContainer"]
+modulate = Color( 1, 0.482353, 0.482353, 1 )
+margin_left = 170.0
+margin_right = 267.0
+margin_bottom = 33.0
+focus_mode = 0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+text = "Pokedex"
+
+[node name="Options" type="Button" parent="Control/GridContainer"]
+modulate = Color( 0.737255, 1, 0.639216, 1 )
+margin_top = 53.0
+margin_right = 150.0
+margin_bottom = 86.0
+focus_mode = 0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+text = "Options"
+
+[node name="Exit" type="Button" parent="Control/GridContainer"]
+modulate = Color( 0.882353, 0.862745, 0.854902, 1 )
+margin_left = 170.0
+margin_top = 53.0
+margin_right = 267.0
+margin_bottom = 86.0
+focus_mode = 0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[connection signal="pressed" from="Control/GridContainer/GoInTheWild" to="." method="_on_GoInTheWild_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Pokedex" to="." method="_on_Pokedex_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Exit" to="." method="_on_Exit_pressed"]

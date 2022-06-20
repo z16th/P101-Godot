@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Lessons/L01/L01.tscn" type="PackedScene" id=1]
+[gd_scene format=2]
 
 [node name="Playground" type="Node"]
 
@@ -13,5 +11,3 @@ Here you can drag and drop the Scenes you are creating to test them
 Feel free to remove this Label any time"
 align = 1
 valign = 1
-
-[node name="L01" parent="." instance=ExtResource( 1 )]

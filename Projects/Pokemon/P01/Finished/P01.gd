@@ -1,8 +1,8 @@
 extends Node
 
-var bulbasaur = FPokemon.new("Bulbasaur","res://Projects/Pokemon/assets/bulbasaur.png",15)
-var charmander = FPokemon.new("Charmander","res://Projects/Pokemon/assets/charmander.png",20)
-var squirtle = FPokemon.new("Squirtle","res://Projects/Pokemon/assets//squirtle.png",18)
+var bulbasaur = FPokemon.new("Bulbasaur",load("res://Projects/Pokemon/P01/Finished/assets/bulbasaur.png"),15)
+var charmander = FPokemon.new("Charmander",load("res://Projects/Pokemon/P01/Finished/assets/charmander.png"),20)
+var squirtle = FPokemon.new("Squirtle",load("res://Projects/Pokemon/P01/Finished/assets//squirtle.png"),18)
 
 var pokemons = [bulbasaur,charmander,squirtle]
 var picked:FPokemon = get_random_pokemon()
@@ -26,7 +26,7 @@ func check_catch_counter():
 		$Label.text = "{pokemon_name} catched!".format({"pokemon_name": picked.pokemon_name})
 
 func update_sprite():
-	$Sprite.texture = load(picked.sprite)
+	$Sprite.texture = picked.sprite
 
 func update_progress():
 	$ProgressBar.value = catch_counter
