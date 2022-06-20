@@ -12,11 +12,13 @@ show_instructions_panel = false
 [node name="Spatial" type="Spatial" parent="."]
 
 [node name="Camera" type="Camera" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.689338, 1.86202 )
+transform = Transform( 0.598562, 0, 0.801076, 0, 1, 0, -0.801076, 0, 0.598562, 1.59706, 0.689338, 1.20712 )
+fov = 52.8864
 
 [node name="DirectionalLight" type="DirectionalLight" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, -0.258819, 0.965926, 0, -0.965926, -0.258819, 0, 3, 0 )
+transform = Transform( 0.482963, -0.0334937, -0.875, 0.866025, -0.129409, 0.482963, -0.129409, -0.991025, -0.0334936, -4, 2, 0 )
 
 [node name="chr_knight" type="MeshInstance" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0253512, 0, 0.0105526 )
 mesh = ExtResource( 2 )
 material/0 = null

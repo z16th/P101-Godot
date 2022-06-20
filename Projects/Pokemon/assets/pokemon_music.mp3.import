@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pokemon_music.mp3-1d22106709a152b84da007ab61dc56bf.mp3str"
+
+[deps]
+
+source_file="res://Projects/Pokemon/assets/pokemon_music.mp3"
+dest_files=[ "res://.import/pokemon_music.mp3-1d22106709a152b84da007ab61dc56bf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
