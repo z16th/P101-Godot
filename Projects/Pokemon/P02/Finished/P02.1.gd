@@ -22,29 +22,18 @@ func _input(event):
 
 func check_catch_counter():
 	if catch_counter == picked.difficulty:
-		$Sprite/Particles2D.emitting = true
 		var label = $Label
 		label.visible = true
 		label.text = "{pokemon_name} catched!".format({"pokemon_name": picked.pokemon_name})
-		var label_tween = $Label/Tween
-		label_tween.interpolate_property(label,"percent_visible",0,1,1)
-		label_tween.start()
-		var sprite = $Sprite
-		var sprite_tween = $Sprite/Tween
-		sprite_tween.interpolate_property(sprite,"scale",sprite.scale,Vector2(-3,3),1)
-		sprite_tween.start()
-		yield(sprite_tween,"tween_completed")
-		sprite_tween.interpolate_property(sprite,"scale",sprite.scale,Vector2(3,3),1,Tween.TRANS_ELASTIC,Tween.EASE_IN)
-		sprite_tween.start()
+		$Label/Tween.text_tween()
+		$Sprite/Tween.animation_tween()
+		$Sprite/Particles2D.emitting = true
 
 func update_sprite():
 	$Sprite.texture = picked.sprite
 	
 func update_progress():
-	var tween = $ProgressBar/Tween
-	var progress_var = $ProgressBar
-	tween.interpolate_property(progress_var,"value",progress_var.value,catch_counter,0.3)
-	tween.start()
+	$ProgressBar/Tween.progress_tween(catch_counter)
 
 func get_random_pokemon():
 	randomize()

@@ -5,6 +5,9 @@
 [resource]
 script = ExtResource( 1 )
 catched = {
+"articuno": 1,
+"clefairy": 1,
+"metapod": 1,
 "nidoqueen": 1,
 "weezing": 1
 }

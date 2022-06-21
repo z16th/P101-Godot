@@ -1,7 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Projects/Pokemon/P02/Finished/P02.gd" type="Script" id=1]
+[ext_resource path="res://Projects/Pokemon/P02/Finished/P02.1.gd" type="Script" id=1]
 [ext_resource path="res://Projects/Pokemon/P01/Finished/assets/bulbasaur.png" type="Texture" id=2]
+[ext_resource path="res://Projects/Pokemon/P02/Finished/assets/pixel-star.png" type="Texture" id=3]
+[ext_resource path="res://Projects/Pokemon/P02/Finished/TweenCollection.gd" type="Script" id=4]
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 1.0
+flag_disable_z = true
+direction = Vector3( 1, 1, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 600.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 0.866667, 0.266667, 1 )
@@ -25,6 +38,18 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 2 )
 
 [node name="Tween" type="Tween" parent="Sprite"]
+script = ExtResource( 4 )
+
+[node name="Particles2D" type="Particles2D" parent="Sprite"]
+scale = Vector2( 0.1, 0.1 )
+z_index = -1
+emitting = false
+amount = 50
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+process_material = SubResource( 3 )
+texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -40,6 +65,9 @@ grow_vertical = 2
 align = 1
 valign = 1
 
+[node name="Tween" type="Tween" parent="Label"]
+script = ExtResource( 4 )
+
 [node name="ProgressBar" type="ProgressBar" parent="."]
 anchor_top = 0.5
 anchor_right = 1.0
@@ -54,3 +82,4 @@ custom_styles/fg = SubResource( 1 )
 custom_styles/bg = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="ProgressBar"]
+script = ExtResource( 4 )
