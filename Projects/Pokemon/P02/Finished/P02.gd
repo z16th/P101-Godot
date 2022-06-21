@@ -23,11 +23,8 @@ func _input(event):
 func check_catch_counter():
 	if catch_counter == picked.difficulty:
 		var label = $Label
-		var label_tween = $Label/Tween
 		label.visible = true
 		label.text = "{pokemon_name} catched!".format({"pokemon_name": picked.pokemon_name})
-		label_tween.interpolate_property(label,"rect_scale",label.rect_scale,Vector2(2,2),0.5)
-		label_tween.start()
 		var sprite = $Sprite
 		var sprite_tween = $Sprite/Tween
 		sprite_tween.interpolate_property(sprite,"scale",sprite.scale,Vector2(-3,3),1)
