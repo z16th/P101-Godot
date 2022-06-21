@@ -53,6 +53,10 @@ texture = ExtResource( 2 )
 position = Vector2( 627, 340 )
 scale = Vector2( 0.606667, 0.606667 )
 frames = SubResource( 1 )
+<<<<<<< Updated upstream
+=======
+frame = 2
+>>>>>>> Stashed changes
 playing = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

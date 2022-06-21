@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Projects/Pokemon/P02/Finished/assets/charmander.png" type="Texture" id=1]
+[ext_resource path="res://Projects/Pokemon/P02/Katia/E02.gd" type="Script" id=2]
+
+[node name="Node" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 258, 179 )
+scale = Vector2( 2.82292, 2.82292 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="Tween" type="Tween" parent="Sprite"]

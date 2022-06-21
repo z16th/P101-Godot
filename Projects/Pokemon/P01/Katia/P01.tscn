@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Projects/Pokemon/assets/Minecrafter.Alt.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Projects/Pokemon/P01/Katia/P01.gd" type="Script" id=2]
+[ext_resource path="res://Projects/Pokemon/assets/bulbasaur.png" type="Texture" id=3]
+[ext_resource path="res://Projects/Pokemon/assets/pokemon_music.mp3" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.67451, 0.878431, 0.788235, 1 )
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0.901961, 0.164706, 0.878431, 1 )
+anchor_right = 1.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 1 )
+text = "READY TRAINER?"
+align = 1
+valign = 1
+
+[node name="Catch" type="Label" parent="."]
+modulate = Color( 0.901961, 0.164706, 0.878431, 1 )
+anchor_right = 1.0
+margin_top = 456.0
+margin_bottom = 541.0
+custom_fonts/font = SubResource( 1 )
+text = "CATCH!"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 500, 136 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -12.0
+autoplay = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 100.0
+margin_top = 85.0
+margin_right = -100.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
