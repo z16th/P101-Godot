@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Projects/Pokemon/assets/Minecrafter.Alt.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Projects/Pokemon/P01/Katia/P01.gd" type="Script" id=2]
-[ext_resource path="res://Projects/Pokemon/assets/bulbasaur.png" type="Texture" id=3]
+[ext_resource path="res://Projects/Pokemon/PF/assets/sprites/bulbasaur.png" type="Texture" id=3]
 [ext_resource path="res://Projects/Pokemon/assets/pokemon_music.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
