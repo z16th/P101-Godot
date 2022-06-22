@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=6 format=2]
+
+[ext_resource path="res://Projects/Pokemon/P03/Katia/resources/Pokemon_Classic_12.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Projects/Pokemon/P03/Katia/resources/Button_normal.tres" type="StyleBox" id=2]
+[ext_resource path="res://Projects/Pokemon/P03/Katia/resources/Button_hover.tres" type="StyleBox" id=3]
+[ext_resource path="res://Projects/Pokemon/P03/Katia/resources/Button_pressed.tres" type="StyleBox" id=4]
+[ext_resource path="res://Projects/Pokemon/P03/Katia/resources/Button_disable.tres" type="StyleBox" id=5]
+
+[resource]
+Button/colors/font_color = Color( 0.415686, 0.403922, 0.403922, 1 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/fonts/font = ExtResource( 1 )
+Button/styles/disabled = ExtResource( 5 )
+Button/styles/hover = ExtResource( 3 )
+Button/styles/normal = ExtResource( 2 )
+Button/styles/pressed = ExtResource( 4 )
+Label/fonts/font = ExtResource( 1 )

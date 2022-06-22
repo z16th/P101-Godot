@@ -27,9 +27,5 @@ func _input(event):
 			$Sprite/Particles2D.visible = true
 			print(Pokemon1.pokemon_name, " CATCH")
 
-func _on_Button_pressed():
-	get_tree().reload_current_scene()
-	
 
-func _on_Button2_pressed():
-	get_tree().change_scene("res://Projects/Pokemon/P03/Katia/Scenes/PantallaInicio.tscn")
+

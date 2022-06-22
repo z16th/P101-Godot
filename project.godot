@@ -72,6 +72,10 @@ config/windows_native_icon="res://Projects/Pokemon/PF/assets/icon.ico"
 _Utils="*res://Projects/Pokemon/PF/scripts/_Utils.gd"
 _Game="*res://Projects/Pokemon/PF/scripts/_Game.gd"
 
+[gui]
+
+theme/custom="res://Projects/Pokemon/P03/Katia/resources/new_theme.tres"
+
 [importer_defaults]
 
 texture={
