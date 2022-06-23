@@ -40,6 +40,16 @@ _global_script_classes=[ {
 "path": "res://Scripts/Lesson.gd"
 }, {
 "base": "Node",
+"class": "P04Pokemon",
+"language": "GDScript",
+"path": "res://Projects/Pokemon/P04/Finished04/scripts/P04Pokemon.gd"
+}, {
+"base": "Resource",
+"class": "P04PokemonResource",
+"language": "GDScript",
+"path": "res://Projects/Pokemon/P04/Finished04/scripts/P04PokemonResource.gd"
+}, {
+"base": "Node",
 "class": "Pokemon",
 "language": "GDScript",
 "path": "res://Projects/Pokemon/KPokemon.gd"
@@ -56,6 +66,8 @@ _global_script_class_icons={
 "FPokemonResource": "",
 "Fighter": "",
 "Lesson": "",
+"P04Pokemon": "",
+"P04PokemonResource": "",
 "Pokemon": "",
 "SettingsResource": ""
 }
@@ -71,6 +83,7 @@ config/windows_native_icon="res://Projects/Pokemon/PF/assets/icon.ico"
 
 _Utils="*res://Projects/Pokemon/PF/scripts/_Utils.gd"
 _Game="*res://Projects/Pokemon/PF/scripts/_Game.gd"
+P04GameManager="*res://Projects/Pokemon/P04/Finished04/scripts/P04GameManager.gd"
 
 [gui]
 

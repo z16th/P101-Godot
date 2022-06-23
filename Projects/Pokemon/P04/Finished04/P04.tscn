@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Projects/Pokemon/P04/Finished04/scenes/TitleScreen.tscn" type="PackedScene" id=1]
+
+[node name="P04" type="Node"]
+
+[node name="TitleScreen" parent="." instance=ExtResource( 1 )]
