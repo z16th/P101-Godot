@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=2]
+
+[ext_resource path="res://Projects/Pokemon/P03/Katia/assets/ui/menu-button_disabled.png" type="Texture" id=1]
+
+[resource]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 72, 24 )
+margin_left = 11.3938
+margin_right = 11.3938
+margin_top = 9.94371
+margin_bottom = 9.94371

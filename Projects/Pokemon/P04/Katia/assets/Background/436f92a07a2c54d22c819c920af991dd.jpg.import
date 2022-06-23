@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/436f92a07a2c54d22c819c920af991dd.jpg-97ff3001f17d866be3f1776e29ab1e95.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Projects/Pokemon/P04/Katia/assets/Background/436f92a07a2c54d22c819c920af991dd.jpg"
+dest_files=[ "res://.import/436f92a07a2c54d22c819c920af991dd.jpg-97ff3001f17d866be3f1776e29ab1e95.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

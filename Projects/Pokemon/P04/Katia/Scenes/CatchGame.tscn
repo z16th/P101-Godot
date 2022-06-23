@@ -1,0 +1,116 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Projects/Pokemon/P02/Katia/CatchTweens.gd" type="Script" id=1]
+[ext_resource path="res://Projects/Pokemon/P04/Katia/Scenes/CatchGame.gd" type="Script" id=2]
+[ext_resource path="res://Projects/Pokemon/assets/Minecrafter.Alt.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Projects/Pokemon/PF/assets/icon.png" type="Texture" id=4]
+[ext_resource path="res://Projects/Pokemon/PF/assets/sprites/bulbasaur.png" type="Texture" id=5]
+[ext_resource path="res://Projects/Pokemon/assets/pokemon_music.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Projects/Pokemon/P03/Katia/resources/new_theme.tres" type="Theme" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+flag_disable_z = true
+direction = Vector3( 5, 20, 0 )
+spread = 75.0
+gravity = Vector3( 100, 100, 100 )
+initial_velocity = 519.61
+initial_velocity_random = 0.3
+angular_velocity = 183.53
+angular_velocity_random = 0.4
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.0
+scale_random = 1.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.67451, 0.878431, 0.788235, 1 )
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0.901961, 0.164706, 0.878431, 1 )
+anchor_right = 1.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 1 )
+text = "READY TRAINER?"
+align = 1
+valign = 1
+
+[node name="Catch" type="Label" parent="."]
+modulate = Color( 0.901961, 0.164706, 0.878431, 1 )
+anchor_right = 1.0
+margin_top = 456.0
+margin_bottom = 541.0
+custom_fonts/font = SubResource( 1 )
+text = "CATCH!"
+align = 1
+valign = 1
+
+[node name="Tween" type="Tween" parent="Catch"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 500, 136 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+
+[node name="Tween" type="Tween" parent="Sprite"]
+script = ExtResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="Sprite"]
+position = Vector2( -6.75, -4.75 )
+scale = Vector2( 0.05, 0.05 )
+z_index = -1
+amount = 10
+lifetime = 2.0
+process_material = SubResource( 4 )
+texture = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -12.0
+autoplay = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 100.0
+margin_top = 85.0
+margin_right = -100.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+
+[node name="Tween" type="Tween" parent="ProgressBar"]
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 201.0
+margin_top = 533.0
+margin_right = 417.0
+margin_bottom = 575.0
+theme = ExtResource( 7 )
+text = "TRY AGAIN"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 629.0
+margin_top = 533.0
+margin_right = 845.0
+margin_bottom = 575.0
+theme = ExtResource( 7 )
+text = "EXIT"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
