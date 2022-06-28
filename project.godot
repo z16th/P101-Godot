@@ -52,12 +52,12 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Pokemon",
 "language": "GDScript",
-"path": "res://Projects/Pokemon/KPokemon.gd"
+"path": "res://Projects/Pokemon/Katia/scripts/Pokemon.gd"
 }, {
 "base": "Resource",
 "class": "PokemonResource",
 "language": "GDScript",
-"path": "res://Projects/Pokemon/P04/Katia/Scripts/PokemonResource.gd"
+"path": "res://Projects/Pokemon/Katia/scripts/PokemonResource.gd"
 }, {
 "base": "Resource",
 "class": "SettingsResource",
