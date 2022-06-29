@@ -1,8 +1,8 @@
 extends Node
 
-var pokemon1 := Pokemon.new("res://Projects/Pokemon/Katia/resources/pokemon/Morpeko.tres")
 onready var sprite = $Sprite
 var progress = 0
+var pokemon1 := Pokemon.new("res://Projects/Pokemon/Katia/resources/pokemon/Morpeko.tres")
 var pokemon2 = Pokemon.new("res://Projects/Pokemon/Katia/resources/pokemon/Wooloo.tres")
 var pokemon3 = Pokemon.new("res://Projects/Pokemon/Katia/resources/pokemon/Yamper.tres")
 
@@ -28,6 +28,7 @@ func _input(event):
 			$Catch/Tween.catch_animation()
 			$Sprite/Particles2D.visible = true
 			print(picked.pokemon_name, " CATCH")
+			TemporalPokedex.add_pokemon(picked)
 
 func _on_Button_pressed():
 	get_tree().reload_current_scene()

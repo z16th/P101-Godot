@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Projects/Pokemon/Katia/assets/sprites/alcremie.png" type="Texture" id=1]
+[ext_resource path="res://Projects/Pokemon/Katia/assets/background/FondoDex.png" type="Texture" id=2]
+[ext_resource path="res://Projects/Pokemon/Katia/resources/theme/new_theme.tres" type="Theme" id=3]
+[ext_resource path="res://Projects/Pokemon/Katia/scenes/PokedexScene.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="PokedexScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="ItemList" type="ItemList" parent="."]
+anchor_left = 0.037
+anchor_top = 0.2
+anchor_right = 0.963
+anchor_bottom = 0.933
+theme = ExtResource( 3 )
+custom_constants/vseparation = 20
+custom_constants/icon_margin = 20
+custom_constants/hseparation = 20
+custom_styles/bg = SubResource( 1 )
+items = [ "Elemento 0", ExtResource( 1 ), false, "Elemento 1", ExtResource( 1 ), false, "Elemento 2", ExtResource( 1 ), false, "Elemento 3", ExtResource( 1 ), false, "Elemento ", ExtResource( 1 ), false, "Elemento 5", ExtResource( 1 ), false ]
+max_columns = 6
+same_column_width = true
+icon_mode = 0
+icon_scale = 3.0
+
+[node name="Button" type="Button" parent="."]
+margin_left = 12.0
+margin_top = 27.0
+margin_right = 91.0
+margin_bottom = 67.0
+theme = ExtResource( 3 )
+text = "BACK"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

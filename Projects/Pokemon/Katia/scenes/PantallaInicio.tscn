@@ -31,7 +31,7 @@ text = "CATCH THEM ALL"
 align = 2
 valign = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Play" type="Button" parent="."]
 margin_left = 78.0
 margin_top = 88.0
 margin_right = 340.0
@@ -40,14 +40,26 @@ theme = ExtResource( 1 )
 custom_fonts/font = ExtResource( 2 )
 text = "PLAY"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Exit" type="Button" parent="."]
 margin_left = 78.0
-margin_top = 180.0
+margin_top = 251.0
 margin_right = 340.0
-margin_bottom = 226.0
+margin_bottom = 297.0
+rect_pivot_offset = Vector2( 86, -46 )
 theme = ExtResource( 1 )
 custom_fonts/font = ExtResource( 2 )
 text = "EXIT"
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[node name="Pokedex" type="Button" parent="."]
+margin_left = 78.0
+margin_top = 167.0
+margin_right = 340.0
+margin_bottom = 213.0
+rect_pivot_offset = Vector2( 86, -46 )
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "POKEDEX"
+
+[connection signal="pressed" from="Play" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Pokedex" to="." method="_on_Pokedex_pressed"]
