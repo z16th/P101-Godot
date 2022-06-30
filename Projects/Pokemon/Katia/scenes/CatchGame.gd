@@ -28,7 +28,15 @@ func _input(event):
 			$Catch/Tween.catch_animation()
 			$Sprite/Particles2D.visible = true
 			print(picked.pokemon_name, " CATCH")
-			TemporalPokedex.add_pokemon(picked)
+			
+			var x
+			if ResourceLoader.exists("res://Projects/Pokemon/Katia/saved/game1.tres"):
+				x = ResourceLoader.load("res://Projects/Pokemon/Katia/saved/game1.tres")
+			else:
+				x = PokedexResource.new()
+			
+			x.add_pokemon(picked)
+			ResourceSaver.save("res://Projects/Pokemon/Katia/saved/game1.tres",x)	
 
 func _on_Button_pressed():
 	get_tree().reload_current_scene()

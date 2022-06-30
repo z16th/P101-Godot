@@ -4,7 +4,9 @@ onready var item_list := $ItemList
 
 func _ready():
 	item_list.clear()
-	for pokemon in TemporalPokedex.catched:
+	var x:PokedexResource = ResourceLoader.load("res://Projects/Pokemon/Katia/saved/game2.tres")
+	
+	for pokemon in x.catched:
 		item_list.add_item(pokemon.pokemon_name,pokemon.image)
 
 
