@@ -15,6 +15,14 @@ func _ready():
 	print(string_using_single_quotes)
 	print(joining_strings)
 	print(joining_with_variables)
+	var res_path = "algo_bien_cool.tres"
+	var ruta_compleja = "res://una_ruta/por/aqui/{algo_con_extension}/{q}/{asd}".format({
+		"algo_con_extension": res_path,
+		"asd": 10,
+		"q": "hola"
+	})
+	print(ruta_compleja)
+	
 
 	print("\n")
 	

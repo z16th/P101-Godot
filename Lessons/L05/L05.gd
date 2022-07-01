@@ -2,9 +2,15 @@ extends Lesson
 
 #Lesson 05: Arrays
 
-var friends := ["Katia","Bruno","Erick","Dylan"]
+var friends := ["Katia","Bruno","Erick","Dylan",10,[],{}]
 
 func _ready():
+#	friends Array
+#	friends[0] String
+#	friends[1] String
+#	friends[4] Number
+#	friends[5] Array
+#	friends[6] Dictionary
 	print("Initial friends: ", friends)
 	
 	friends.append("Michael")

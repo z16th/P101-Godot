@@ -96,8 +96,8 @@ config/windows_native_icon="res://Projects/Pokemon/PF/assets/icon.ico"
 _Utils="*res://Projects/Pokemon/PF/scripts/_Utils.gd"
 _Game="*res://Projects/Pokemon/PF/scripts/_Game.gd"
 P04GameManager="*res://Projects/Pokemon/P04/Finished04/scripts/P04GameManager.gd"
-GameManager="*res://Projects/Pokemon/Katia/scripts/GameManager.gd"
 TemporalPokedex="*res://Projects/Pokemon/Katia/scripts/TemporalPokedex.gd"
+GameManager="*res://Projects/Pokemon/Katia/scripts/GameManager.gd"
 
 [gui]
 

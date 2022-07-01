@@ -2,14 +2,23 @@ extends Node
 
 onready var sprite = $Sprite
 var progress = 0
-var pokemon1 := Pokemon.new("res://Projects/Pokemon/Katia/resources/pokemon/Morpeko.tres")
-var pokemon2 = Pokemon.new("res://Projects/Pokemon/Katia/resources/pokemon/Wooloo.tres")
-var pokemon3 = Pokemon.new("res://Projects/Pokemon/Katia/resources/pokemon/Yamper.tres")
+#var pokemon1 := Pokemon.new("res://Projects/Pokemon/Katia/resources/pokemon/Morpeko.tres")
+#var pokemons = [pokemon1,pokemon1,pokemon1]
+#var picked:Pokemon = get_random_pokemon()
 
-var pokemons = [pokemon1,pokemon2,pokemon3]
-var picked:Pokemon = get_random_pokemon()
+var pokemons = []
+var picked:Pokemon 
+
+# 0. Populate array with the first value of pokemon_paths
+# 1. Populate array with Pokemon(s)
+# 2. Assign value to "picked" 
 
 func _ready():
+#	[Alcremie.tres, Appletun.tres, Applin.tres,...]
+	var pokemon_paths = _Utils.list_files_in_directory("res://Projects/Pokemon/Katia/resources/pokemon/")
+	for poke in pokemon_paths:
+		pokemons.append(Pokemon.new("res://Projects/Pokemon/Katia/resources/pokemon/" + poke))
+	picked = get_random_pokemon()
 	$Sprite.texture=picked.image
 	$Sprite/Tween.animated_position()
 	$ProgressBar.max_value=picked.capture_rate
@@ -30,13 +39,13 @@ func _input(event):
 			print(picked.pokemon_name, " CATCH")
 			
 			var x
-			if ResourceLoader.exists("res://Projects/Pokemon/Katia/saved/game1.tres"):
-				x = ResourceLoader.load("res://Projects/Pokemon/Katia/saved/game1.tres")
+			if ResourceLoader.exists(GameManager.SAVE):
+				x = ResourceLoader.load(GameManager.SAVE)
 			else:
 				x = PokedexResource.new()
 			
 			x.add_pokemon(picked)
-			ResourceSaver.save("res://Projects/Pokemon/Katia/saved/game1.tres",x)	
+			ResourceSaver.save(GameManager.SAVE,x)	
 
 func _on_Button_pressed():
 	get_tree().reload_current_scene()

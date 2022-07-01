@@ -16,16 +16,16 @@ func load_resource(path):
 		return load(path)
 	return null
 
-func convert_sprites_to_resources():
-	var image_paths = filter_by_extension(list_files_in_directory(SPRITES_PATH),"png")
+func convert_sprites_to_resources(sprites_path,resources_path):
+	var image_paths = filter_by_extension(list_files_in_directory(sprites_path),"png")
 	for path in image_paths:
-		var resource = FPokemonResource.new()
-		var pokemon_name = path.replace(".png","")
-		resource.name = pokemon_name.capitalize()
-		resource.sprite = load(SPRITES_PATH + path)
+		var resource = PokemonResource.new()
+		var pokemon_name = path.replace(".png","").capitalize()
+		resource.pokemon_name = pokemon_name.capitalize()
+		resource.image = load(sprites_path + path)
 		
-		var save_path = POKEMONS_RES_PATH+pokemon_name+".tres"
-		resource.save()
+		var save_path = resources_path+pokemon_name+".tres"
+		ResourceSaver.save(save_path,resource)
 
 func list_pokemon_resources() -> Array:
 	assert(not ResourceLoader.exists(POKEMONS_RES_PATH))
