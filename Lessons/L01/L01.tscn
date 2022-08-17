@@ -4,19 +4,6 @@
 
 [node name="L01" type="Node"]
 script = ExtResource( 1 )
-topic = "Variables and data types"
+topic = "Variables and constants"
 
-[node name="Panel" type="Panel" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="Label" type="Label" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "Open the L01 script
-
-Play the Scene
-
-Check the Console (Output)"
-align = 1
-valign = 1
+[node name="Sprite" type="Sprite" parent="."]

@@ -1,7 +1,7 @@
 extends Node
 class_name Lesson
 
-const DEFAULT_MESSAGE = "Open the Script, run it and check the console"
+const DEFAULT_MESSAGE = "Open the script and check the console"
 
 export (String) var topic
 export (String,MULTILINE) var instructions := DEFAULT_MESSAGE setget set_instructions
@@ -29,7 +29,10 @@ func add_panel():
 	panel.rect_size = get_viewport().size
 	
 	var title = Label.new()
+	var offset = 20
 	title.text = name if !topic else name + ": " + topic
+	title.margin_left = offset
+	title.margin_top = offset
 	canvas.add_child(title)
 	
 	content = Label.new()

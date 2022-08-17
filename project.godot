@@ -15,18 +15,12 @@ _global_script_classes=[ {
 "path": "res://Lessons/L09/Car.gd"
 }, {
 "base": "Node",
-"class": "FPokemon",
-"language": "GDScript",
-"path": "res://Projects/P01/Finished/Pokemon.gd"
-}, {
-"base": "Node",
 "class": "Lesson",
 "language": "GDScript",
 "path": "res://Scripts/Lesson.gd"
 } ]
 _global_script_class_icons={
 "Car": "",
-"FPokemon": "",
 "Lesson": ""
 }
 
