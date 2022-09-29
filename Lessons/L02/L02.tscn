@@ -1,6 +1,12 @@
 [gd_scene load_steps=2 format=2]
 
+<<<<<<< Updated upstream
 [ext_resource path="res://Lessons/L02/L02.gd" type="Script" id=1]
 
 [node name="L02" type="Node"]
+=======
+[ext_resource path="res://Lessons/L03/L03.gd" type="Script" id=1]
+
+[node name="L03" type="Node"]
+>>>>>>> Stashed changes
 script = ExtResource( 1 )
