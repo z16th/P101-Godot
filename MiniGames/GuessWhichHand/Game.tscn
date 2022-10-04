@@ -67,7 +67,7 @@ custom_styles/normal = SubResource( 4 )
 [node name="Label" type="Label" parent="Player1Input"]
 anchor_right = 1.0
 margin_bottom = 83.0
-text = "Select a Hand"
+text = "Player 1: Select a Hand"
 align = 1
 valign = 1
 
@@ -101,7 +101,7 @@ custom_styles/normal = SubResource( 5 )
 [node name="Label" type="Label" parent="Player2Input"]
 anchor_right = 1.0
 margin_bottom = 83.0
-text = "Select a Hand"
+text = "Player 2: Select a Hand"
 align = 1
 valign = 1
 

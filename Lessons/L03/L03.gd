@@ -2,15 +2,9 @@ extends Lesson
 
 # LESSON 03: Basic math operations
 
-# Uninitialized variable
 var result
 
-# Using const instead of var
-const unmutable_result = 10 + 10
-
 func _ready():
-#	unmutable_result = 12
-	
 	result = 2 + 5
 	print("The result of 2 + 5 is: ", result)
 	
